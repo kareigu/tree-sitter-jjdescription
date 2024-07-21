@@ -1,0 +1,12 @@
+testing
+asdd
+Jest
+
+JJ: This commit contains the following changes:
+JJ:     A .editorconfig
+JJ:     D .gitattributes
+JJ:     M .gitignore
+JJ:
+
+JJ: Lines starting with "JJ: " (like this one) will be removed.
+

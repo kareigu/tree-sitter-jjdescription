@@ -1,0 +1,61 @@
+===========
+Real commit
+===========
+Title text goes here
+
+Extra comments for the commit
+message
+should go here and can be
+
+
+long
+JJ: This commit contains the following changes:
+JJ:     A .editorconfig
+JJ:     A .gitattributes
+JJ:     M .gitignore
+JJ:     A Cargo.toml
+JJ:     D Makefile
+JJ:     A src/tree_sitter/alloc.h
+JJ:     D src/tree_sitter/array.h
+JJ:     A src/tree_sitter/parser.h
+
+JJ: Lines starting with "JJ: " (like this one) will be removed.
+
+
+---
+
+
+(document
+		(text)
+		(text)
+		(text)
+		(text)
+		(text)
+		(comment
+				(comment_text))
+		(comment
+				(change
+					(filepath)))
+		(comment
+				(change
+					(filepath)))
+		(comment
+				(change
+					(filepath)))
+		(comment
+				(change
+					(filepath)))
+		(comment
+				(change
+					(filepath)))
+		(comment
+				(change
+					(filepath)))
+		(comment
+				(change
+					(filepath)))
+		(comment
+				(change
+					(filepath)))
+		(comment
+				(comment_text)))

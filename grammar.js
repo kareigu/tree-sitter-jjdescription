@@ -1,10 +1,11 @@
+const NEWLINE = /\r?\n/;
 const ANY_TEXT = /[^\r\n]+?/
 const WHITESPACE = /[\f\v ]+/
 const COMMENT_PREFIX = "JJ:"
 
 module.exports = grammar({
   name: 'jjdescription',
-  extras: ($) => ["\r", "\n"],
+  extras: ($) => [],
 
   // conflicts: ($) => [
   //   [$.change_comment, $.text_comment]
@@ -14,8 +15,9 @@ module.exports = grammar({
     document: ($) =>
       repeat(
         choice(
-          $.text,
-          $.comment,
+          seq($.text, NEWLINE),
+          seq($.comment, NEWLINE),
+          NEWLINE,
         ),
       ),
 
@@ -47,7 +49,10 @@ module.exports = grammar({
     _text_comment: ($) =>
       seq(optional(WHITESPACE), /[^AMD ]/, alias(ANY_TEXT, $.comment_text)),
 
-    text: ($) =>
-      seq(/[^J\n]/, ANY_TEXT),
+    text: ($) => choice(
+      seq(/[^J]/, optional(ANY_TEXT)),
+      seq("J", optional(seq(/[^J]/, optional(ANY_TEXT)))),
+      seq("JJ", optional(seq(/[^:]/, optional(ANY_TEXT)))),
+    ),
   },
 })

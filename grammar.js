@@ -14,10 +14,10 @@ module.exports = grammar({
   rules: {
     document: ($) =>
       repeat(
-          choice(
-            $.text,
-            $.comment,
-          ),
+        choice(
+          $.text,
+          $.comment,
+        ),
       ),
 
     change: ($) =>
@@ -29,7 +29,6 @@ module.exports = grammar({
 
     filepath: ($) =>
       ANY_TEXT,
-
 
     comment: ($) =>
       seq(
@@ -47,8 +46,7 @@ module.exports = grammar({
       ),
 
     _text_comment: ($) =>
-      seq(optional(WHITESPACE), /[^AMD ]/,alias(ANY_TEXT, $.comment_text)),
-
+      seq(optional(WHITESPACE), /[^AMD ]/, alias(ANY_TEXT, $.comment_text)),
 
     text: ($) =>
       seq(/[^J\n]/, ANY_TEXT),

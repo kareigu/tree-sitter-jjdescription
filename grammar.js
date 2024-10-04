@@ -1,4 +1,3 @@
-const NEW_LINE = /\r?\n/
 const ANY_TEXT = /[^\r\n]+?/
 const WHITESPACE = /[\f\v ]+/
 const COMMENT_PREFIX = "JJ:"

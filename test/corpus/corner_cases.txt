@@ -1,0 +1,35 @@
+============
+Corner Cases
+============
+J
+
+A
+
+JJ
+
+JA
+
+AA
+
+JJ;
+
+JJ; Text
+
+JJ:
+
+JJJ:
+
+
+---
+
+
+(document
+    (text)
+    (text)
+    (text)
+    (text)
+    (text)
+    (text)
+    (text)
+    (comment)
+    (text))

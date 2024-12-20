@@ -1,4 +1,5 @@
 {
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
   "name": "jjdescription",
   "rules": {
     "document": {
@@ -6,6 +7,10 @@
       "content": {
         "type": "CHOICE",
         "members": [
+          {
+            "type": "SYMBOL",
+            "name": "scissors"
+          },
           {
             "type": "SEQ",
             "members": [
@@ -76,6 +81,72 @@
     "filepath": {
       "type": "PATTERN",
       "value": "[^\\r\\n]+?"
+    },
+    "scissors": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "PATTERN",
+            "value": "JJ: ignore-rest\\r?\\n"
+          },
+          "named": true,
+          "value": "comment"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "REPEAT",
+            "content": {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "PATTERN",
+                  "value": "[^\\r\\n]+?"
+                },
+                {
+                  "type": "PATTERN",
+                  "value": "\\r?\\n"
+                }
+              ]
+            }
+          },
+          "named": true,
+          "value": "scissors_inner"
+        },
+        {
+          "type": "ALIAS",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": "JJ: describe "
+                  },
+                  {
+                    "type": "PATTERN",
+                    "value": "[^\\r\\n]+?"
+                  },
+                  {
+                    "type": "PATTERN",
+                    "value": "\\r?\\n"
+                  }
+                ]
+              },
+              {
+                "type": "STRING",
+                "value": "\u0000"
+              }
+            ]
+          },
+          "named": true,
+          "value": "comment"
+        }
+      ]
     },
     "comment": {
       "type": "SEQ",

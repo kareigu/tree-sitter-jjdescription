@@ -55,6 +55,7 @@
   {
     "type": "document",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -62,6 +63,10 @@
       "types": [
         {
           "type": "comment",
+          "named": true
+        },
+        {
+          "type": "scissors",
           "named": true
         },
         {
@@ -73,6 +78,30 @@
   },
   {
     "type": "filepath",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "scissors",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "scissors_inner",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scissors_inner",
     "named": true,
     "fields": {}
   },

@@ -12,11 +12,19 @@
             "named": false
           },
           {
+            "type": "C",
+            "named": false
+          },
+          {
             "type": "D",
             "named": false
           },
           {
             "type": "M",
+            "named": false
+          },
+          {
+            "type": "R",
             "named": false
           }
         ]
@@ -119,6 +127,10 @@
     "named": false
   },
   {
+    "type": "C",
+    "named": false
+  },
+  {
     "type": "D",
     "named": false
   },
@@ -136,6 +148,10 @@
   },
   {
     "type": "M",
+    "named": false
+  },
+  {
+    "type": "R",
     "named": false
   },
   {

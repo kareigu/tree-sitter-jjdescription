@@ -5,6 +5,8 @@ JJ: This commit contains the following changes:
 JJ:     A .editorconfig
 JJ:     D .gitattributes
 JJ:     M .gitignore
+JJ:     C {copy_orig => copy_new}
+JJ:     R {rename_orig => rename_new}
 JJ:
 
 JJ: Lines starting with "JJ: " (like this one) will be removed.
@@ -15,6 +17,12 @@ JJ: Lines starting with "JJ: " (like this one) will be removed.
 (document
 	(comment
 		(comment_text))
+	(comment
+		(change
+			(filepath)))
+	(comment
+		(change
+			(filepath)))
 	(comment
 		(change
 			(filepath)))

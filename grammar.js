@@ -25,7 +25,7 @@ module.exports = grammar({
 
     change: ($) =>
       seq(
-        field('type', choice("A", "M", "D")),
+        field('type', choice("A", "M", "D", "C", "R")),
         " ",
         $.filepath,
       ),

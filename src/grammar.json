@@ -64,6 +64,14 @@
               {
                 "type": "STRING",
                 "value": "D"
+              },
+              {
+                "type": "STRING",
+                "value": "C"
+              },
+              {
+                "type": "STRING",
+                "value": "R"
               }
             ]
           }

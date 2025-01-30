@@ -1,4 +1,4 @@
-(text) @string
+(text) @string @spell
 (filepath) @string.special.path
 
 (change type: "A" @diff.plus)
